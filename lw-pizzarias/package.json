@@ -1,0 +1,15 @@
+{
+  "name": "lw-pizzarias",
+  "version": "2.0.0",
+  "private": true,
+  "description": "Cardápio e delivery da LW Pizzarias: abertura 3D, pedidos no Firebase e painel administrativo protegido por servidor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "build:hero": "esbuild src/hero3d.js --bundle --minify --format=esm --target=es2020 --outfile=public/vendor/hero3d.js",
+    "test": "node test/servidor.test.js firebase && node test/servidor.test.js arquivo"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": { "firebase-admin": "^14.5.0" },
+  "devDependencies": { "esbuild": "^0.28.2", "three": "^0.186.1" }
+}
